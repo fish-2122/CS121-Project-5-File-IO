@@ -23,11 +23,11 @@ while not at end of file (getline(infile, currentline)) <--- this not only gets 
     
     put currentline in ss
 
-    get everything in ss up to the first 's' and put it in num1S
+    get everything in ss up to the first ',' and put it in num1S
     put that in converter, and then put converter in num1, converting it from string to int
     clear converter
 
-    get everything in ss up to the first 's' and put it in num2S
+    get everything in ss up to the next ',' and put it in num2S <--- it knows to go to the next comma instead of going to the first one again because stringstream has an internal pointer to know where you are in the string
     put that in converter, and then put converter in num2, converting it from string to int
     clear converter
 
